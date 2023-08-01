@@ -1,6 +1,5 @@
 let num = 31;
 let arreglo = [];
-let validar = [];
 let segundoArreglo = [];
 let primos = [];
 let numeroPrimo = []
