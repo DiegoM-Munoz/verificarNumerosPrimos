@@ -1,0 +1,25 @@
+let num = 31;
+let arreglo = [];
+let validar = [];
+let segundoArreglo = [];
+let primos = [];
+let numeroPrimo = []
+
+
+//Crea el 'array' con los numero menores a validar
+for(i = 2; i <= num; i++) {
+  console.log(i);
+  arreglo.push(i);
+  //.filter elimina el valor indicado de un arreglo
+  segundoArreglo = arreglo.filter(n => n !== i);
+  console.log(segundoArreglo);
+  //.map itera sobre todos los elementos del arreglo y verifica si cumplen con la condición. Devuelve valor booleano y debe ser tratado como tal.
+  // console.log(segundoArreglo.map(n => i % n === 0));
+  numeroPrimo = segundoArreglo.map(n => i % n === 0);
+  //.find busca el valor definido dentro de un arreglo y devuelve un valor booleano.
+  if((numeroPrimo.find(n => n === true) === undefined)) {
+    primos.push(i)
+  };
+};
+
+console.log('Los numeros primos son: ' + primos)
